@@ -1,0 +1,14 @@
+---
+title: "Site launch"
+description: "Some post description"
+author: "Emi Tanaka"
+date: "3/28/2022"
+categories:
+  - news
+---
+
+
+```{r}
+library(edibble)
+menu_crd()
+```

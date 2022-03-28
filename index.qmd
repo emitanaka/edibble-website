@@ -1,0 +1,23 @@
+---
+title: "Welcome"
+---
+
+
+:::{.callout-caution}
+
+## This website is still under construction!
+
+<center>
+
+[🚧]{style="font-size:80px"}
+
+There's nothing much to see here at the moment.
+
+</center>
+
+
+
+
+:::
+
+Stay tuned for updates that'll be announced likely on my twitter account, [@statsgen](https://twitter.com/statsgen), first.

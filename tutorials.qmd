@@ -1,0 +1,8 @@
+---
+title: "Tutorials"
+listing:
+  contents: tutorials
+  sort: "date desc"
+  type: default
+  categories: true
+---

@@ -1,0 +1,8 @@
+---
+title: Page Not Found
+---
+
+Sorry, we couldn't find the page you requested. 
+
+Try searching within the website or go to [edibble.design home page](edibble.design).
+

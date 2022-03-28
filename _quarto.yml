@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "edibble designs"
+  page-footer: "© Copyright 2022 Emi Tanaka"
+  reader-mode: true
+  twitter-card: true
+  google-analytics: "G-EQXS0VTNX7"
+  repo-url: https://github.com/emitanaka/edibble-website
+  repo-actions: [edit, issue]
+  repo-branch: master
+  site-url: "https://edibble.design"
+  search:
+    location: navbar
+    type: overlay
+  sidebar:
+    style: "docked"
+    #search: true
+    type: "light"
+    background: "light"
+    foreground: "primary"
+    border: true
+    alignment: "left"
+    collapse-level: 2
+    pinned: false
+    contents:
+      - tutorials.qmd
+      - cases.qmd
+
+  navbar:
+    type: dark
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - blog.qmd
+      - help.qmd
+      - contribute.qmd
+      - about.qmd
+    right:
+      - icon: rss
+        href: index.xml
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
