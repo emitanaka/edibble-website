@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.151">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>edibble designs - Welcome</title>
+  <title>edibble designs - Tutorials</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <script src="site_libs/quarto-listing/list.min.js"></script>
+  <script src="site_libs/quarto-listing/quarto-listing.js"></script>
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -48,6 +50,29 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
+  <script>
+
+    window.document.addEventListener("DOMContentLoaded", function (_event) {
+      const listingTargetEl = window.document.querySelector('#listing-listing .list');
+      if (!listingTargetEl) {
+        // No listing discovered, do not attach.
+        return; 
+      }
+
+      const options = {
+        valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+        
+        searchColumns: ["listing-categories"],
+      };
+
+      window['quarto-listings'] = window['quarto-listings'] || {};
+      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+      if (window['quarto-listing-loaded']) {
+        window['quarto-listing-loaded']();
+      }
+    });
+    </script>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EQXS0VTNX7"></script>
 
   <script type="text/javascript">
@@ -61,10 +86,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="edibble designs - Welcome">
+<meta name="twitter:title" content="edibble designs - Tutorials">
 <meta name="twitter:card" content="summary">
 </head>
-<body class="docked fullcontent">
+<body class="docked">
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -78,7 +103,7 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+    <a class="nav-link" href="./index.html">Home</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./blog.html">Blog</a>
@@ -113,7 +138,7 @@
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Welcome</h1>
+      <h1 class="quarto-secondary-nav-title">Tutorials</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -128,7 +153,7 @@
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials.html" class="sidebar-item-text sidebar-link">Tutorials</a>
+  <a href="./tutorials.html" class="sidebar-item-text sidebar-link active">Tutorials</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -140,33 +165,32 @@
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Welcome</h1></div></header>
-<div class="callout-caution callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-This website is still under construction!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<center>
-<p><span style="font-size:80px">🚧</span></p>
-<p>There’s nothing much to see here at the moment.</p>
-</center>
-</div>
-</div>
-<p>Stay tuned for updates that’ll be announced likely on my twitter account, <a href="https://twitter.com/statsgen"><span class="citation" data-cites="statsgen">@statsgen</span></a>, first.</p>
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Tutorials</h1></div></header>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";

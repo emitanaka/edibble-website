@@ -1,16 +1,37 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "edibble-website",
+    "objectID": "posts/site-launch.html",
+    "href": "posts/site-launch.html",
+    "title": "Site launch",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 25) %>%\n  set_trts(trt = 3) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 201) %>%\n  serve_table()"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "Stay tuned for updates that’ll be announced likely on my twitter account, @statsgen, first."
+  },
+  {
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "cases.html",
+    "href": "cases.html",
+    "title": "Case studies",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
   }
 ]
