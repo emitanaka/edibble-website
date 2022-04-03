@@ -22,10 +22,10 @@
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">menu_crd</span>()</span></code></pre></div>
 <div class="cell-output-stdout">
 <pre><code>design("Completely Randomised Design") %&gt;%
-  set_units(unit = 25) %&gt;%
-  set_trts(trt = 3) %&gt;%
+  set_units(unit = 30) %&gt;%
+  set_trts(trt = 7) %&gt;%
   allot_trts(trt ~ unit) %&gt;%
-  assign_trts("random", seed = 201) %&gt;%
+  assign_trts("random", seed = 946) %&gt;%
   serve_table()</code></pre>
 </div>
 </div>

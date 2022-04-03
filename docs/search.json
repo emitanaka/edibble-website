@@ -4,7 +4,7 @@
     "href": "posts/site-launch.html",
     "title": "Site launch",
     "section": "",
-    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 25) %>%\n  set_trts(trt = 3) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 201) %>%\n  serve_table()"
+    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 30) %>%\n  set_trts(trt = 7) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 946) %>%\n  serve_table()"
   },
   {
     "objectID": "index.html",

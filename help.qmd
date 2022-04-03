@@ -1,3 +1,9 @@
 ---
-title: "Help"
+title: "Discussion"
 ---
+
+:::{.callout-note}
+
+If you would like help or discuss the edibble system, please submit this to the [discussion board](https://github.com/emitanaka/edibble/discussions). If the nature of the problem is with the technicality of the software (e.g. a possible bug), please submit the issue [here](https://github.com/emitanaka/edibble/issues).
+
+:::
