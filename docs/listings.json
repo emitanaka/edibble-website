@@ -5,7 +5,9 @@
   },
   {
     "listing": "/cases.html",
-    "items": []
+    "items": [
+      "/cases/vegemite-sensory-test/vegemite-sensory-test.html"
+    ]
   },
   {
     "listing": "/blog.html",

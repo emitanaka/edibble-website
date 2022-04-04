@@ -60,9 +60,9 @@
       }
 
       const options = {
-        valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+        valueNames: ['listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
         
-        searchColumns: ["listing-categories"],
+        searchColumns: ["listing-title","listing-author","listing-description","listing-categories"],
       };
 
       window['quarto-listings'] = window['quarto-listings'] || {};
@@ -109,7 +109,7 @@
     <a class="nav-link" href="./blog.html">Blog</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./help.html">Help</a>
+    <a class="nav-link" href="./help.html">Discussion</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./contribute.html">Contribute</a>
@@ -167,7 +167,7 @@
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="sensory">sensory <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
@@ -179,13 +179,54 @@
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="sensory" data-listing-file-modified-sort="1649035821637" data-listing-reading-time-sort="3.54">
+<div class="body">
+<a href="./cases/vegemite-sensory-test/vegemite-sensory-test.html">
+<h3 class="no-anchor listing-title">
+Vegemite sensory discrimination tests
+</h3>
+<div class="listing-subtitle">
 
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('sensory'); return false;">
+sensory
+</div>
+</div>
+<a href="./cases/vegemite-sensory-test/vegemite-sensory-test.html">
+<div class="listing-description">
+<p>Can Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the <code>edibble</code> package.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./cases/vegemite-sensory-test/vegemite-sensory-test.html">
+<div class="listing-author">
+Emi Tanaka
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
