@@ -6,7 +6,27 @@ website:
   title: "edibble designs"
   page-footer: "© Copyright 2022 Emi Tanaka"
   reader-mode: true
-  twitter-card: true
+  favicon: images/favicon.ico
+  cookie-consent:
+    type: implied
+    style: simple
+    palette: light
+  twitter-card:
+    title: "edibble designs"
+    description: |
+      Experimental design using the edibble system.
+    image: images/edibble-website-logo-blue.png
+    image-width: 80
+    image-height: 80
+    card-style: summary
+    creator: "@statsgen"
+    site: "@statsgen"
+  opengraph:
+    title: "edibble designs"
+    description: |
+      Experimental design using the edibble system.
+    locale: es_ES
+    site-name: edibble-design
   google-analytics: "G-EQXS0VTNX7"
   repo-url: https://github.com/emitanaka/edibble-website
   repo-actions: [edit, issue]
@@ -16,26 +36,28 @@ website:
     location: navbar
     type: overlay
   sidebar:
-    style: "docked"
-    #search: true
-    type: "light"
-    background: "light"
-    foreground: "primary"
-    border: true
-    alignment: "left"
+    style: "floating"
+    search: true
+    #type: "light"
+    #background: "light"
+    #foreground: "primary"
+    #border: true
+    #alignment: "left"
     collapse-level: 2
     pinned: false
+    logo: images/edibble-website-logo-blue.png
     contents:
       - tutorials.qmd
-      - cases.qmd
 
   navbar:
+    logo: images/edibble-website-logo.png
     type: dark
     background: primary
     left:
       - href: index.qmd
         text: Home
       - blog.qmd
+      - cases.qmd
       - help.qmd
       - contribute.qmd
       - about.qmd
@@ -45,6 +67,7 @@ website:
 
 format:
   html:
-    theme: sandstone
+    theme: theme.scss
     css: styles.css
     toc: true
+    lang: en

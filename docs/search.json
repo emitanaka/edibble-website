@@ -4,7 +4,7 @@
     "href": "posts/site-launch.html",
     "title": "Site launch",
     "section": "",
-    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 27) %>%\n  set_trts(trt = 6) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 519) %>%\n  serve_table()"
+    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 24) %>%\n  set_trts(trt = 7) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 594) %>%\n  serve_table()"
   },
   {
     "objectID": "cases/vegemite-sensory-test/vegemite-sensory-test.html",
@@ -39,7 +39,7 @@
     "href": "cases.html",
     "title": "Case studies",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nsensory\n\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.\n\n\n\n\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
+    "text": "sensory\n\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.\n\n\n\n\n\n\nEmi Tanaka\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "help.html",
@@ -53,6 +53,6 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\nEmi Tanaka\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

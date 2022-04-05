@@ -1,8 +1,15 @@
 ---
 title: "Case studies"
+page-layout: full
+title-block-banner: true
 listing:
   contents: cases
   sort: "date desc"
+  sort-ui: false
+  filter-ui: false
   type: default
   categories: true
+  fields: [image, date, description, categories, title, author, reading-time]
+  field-display-names:
+    date_format: medium
 ---

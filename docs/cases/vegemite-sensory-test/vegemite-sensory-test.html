@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
   <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.151">
+  <meta name="generator" content="quarto-0.9.183">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Emi Tanaka">
   <meta name="description" content="Can Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.">
@@ -104,6 +104,9 @@
   <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="../../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../../site_libs/quarto-search/quarto-search.js"></script>
+  <link href="../../images/favicon.ico" rel="icon">
+  <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+  <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
   <script src="../../site_libs/quarto-html/quarto.js"></script>
   <script src="../../site_libs/quarto-html/popper.min.js"></script>
   <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -134,29 +137,49 @@
   }</script>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EQXS0VTNX7"></script>
 
-  <script type="text/javascript">
+  <script type="text/plain" cookie-consent="tracking">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-EQXS0VTNX7', { 'anonymize_ip': true});
   </script>
+  
+  <script type="text/javascript" charset="UTF-8">
+  document.addEventListener('DOMContentLoaded', function () {
+  cookieconsent.run({
+    "notice_banner_type":"simple",
+    "consent_type":"implied",
+    "palette":"light",
+    "language":"en",
+    "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+    "notice_banner_reject_button_hide":false,
+    "preferences_center_close_button_hide":false,
+    "website_name":""
+    });
+  });
+  </script> 
+    
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="edibble designs - Vegemite sensory discrimination tests">
-<meta name="twitter:description" content="Can Australians distinguish the true taste of Vegemite? Designing an expriment with
-sensory discrimination test with the `edibble` package. 
+<meta name="twitter:description" content="Experimental design using the edibble system.
 ">
+<meta name="twitter:image" content="https://edibble.design/images/edibble-website-logo-blue.png">
+<meta name="twitter:creator" content="@statsgen">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="80">
+<meta name="twitter:image-width" content="80">
 </head>
-<body class="docked">
+<body class="floating">
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
+    <img src="../../images/edibble-website-logo.png" alt="">
     <span class="navbar-title">edibble designs</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -169,6 +192,9 @@ sensory discrimination test with the `edibble` package.
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../blog.html">Blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cases.html">Case studies</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../help.html">Discussion</a>
@@ -210,17 +236,22 @@ sensory discrimination test with the `edibble` package.
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../">
+      <img src="../../images/edibble-website-logo-blue.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials.html" class="sidebar-item-text sidebar-link">Tutorials</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../cases.html" class="sidebar-item-text sidebar-link">Case studies</a>
   </div>
 </li>
     </ul>
@@ -231,7 +262,7 @@ sensory discrimination test with the `edibble` package.
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">On this page</h2>
 <ul>
-<li><a href="#test-order" class="nav-link active" data-scroll-target="#test-order">Test order</a></li>
+<li><a href="#test-order" id="toc-test-order" class="nav-link active" data-scroll-target="#test-order">Test order</a></li>
 </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/emitanaka/edibble-website/edit/master/cases/vegemite-sensory-test/vegemite-sensory-test.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/emitanaka/edibble-website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -242,7 +273,11 @@ sensory discrimination test with the `edibble` package.
 
 <div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Vegemite sensory discrimination tests</h1><div class="quarto-description"><p>Can Australians distinguish the true taste of Vegemite? Designing an expriment with
 sensory discrimination test with the `edibble` package. 
-</p></div></div><div class="quarto-categories"><div class="quarto-category">sensory</div></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><a href="https://emitanaka.org">Emi Tanaka</a></div></div></div></div><div><div class="quarto-title-meta-heading">Affilliation</div><div class="quarto-title-meta-contents"><div class="quarto-title-affiliations"><p>Monash University</p></div></div></div></div></header>
+</p></div></div><div class="quarto-categories"><div class="quarto-category">sensory</div></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><a href="https://emitanaka.org">
+<p>Emi Tanaka</p>
+</a></div></div></div></div><div><div class="quarto-title-meta-heading">Affilliation</div><div class="quarto-title-meta-contents"><div class="quarto-title-affiliations"><p><div>
+<p>Monash University</p>
+</div></p></div></div></div></div></header>
 
 <p>This blog post attempts to describe the experimental design in <strong><span class="citation" data-cites="Williams2021-pa">Williams et al. (<a href="#ref-Williams2021-pa" role="doc-biblioref">2021</a>)</span></strong> for <strong>sensory discrimination test on vegemite</strong> using the <code>edibble</code> R package. Detailed descriptions are provided in <span class="citation" data-cites="Williams2021-pa">Williams et al. (<a href="#ref-Williams2021-pa" role="doc-biblioref">2021</a>)</span> and I only provide a redacted version in this blog.</p>
 <p>First, I load the package needed. The <code>edibble</code> package is currently available on GitHub at https://github.com/emitanaka/edibble – I am planning to submit this package on <a href="https://cran.r-project.org/">CRAN</a> in the next couple of months.</p>
@@ -252,10 +287,10 @@ sensory discrimination test with the `edibble` package.
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
 </div>
 <div class="cell-output-stderr">
-<pre><code>✓ ggplot2 3.3.5          ✓ purrr   0.3.4     
-✓ tibble  3.1.6          ✓ dplyr   1.0.8.9000
-✓ tidyr   1.1.4          ✓ stringr 1.4.0     
-✓ readr   2.1.2          ✓ forcats 0.5.1     </code></pre>
+<pre><code>✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+✓ tibble  3.1.6     ✓ dplyr   1.0.7
+✓ tidyr   1.1.4     ✓ stringr 1.4.0
+✓ readr   2.1.2     ✓ forcats 0.5.1</code></pre>
 </div>
 <div class="cell-output-stderr">
 <pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -442,7 +477,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">© Copyright 2022 Emi Tanaka</div>
+      <div class="nav-footer-center">© Copyright 2022 Emi Tanaka<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
   </div>
 </footer>
 

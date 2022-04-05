@@ -9,7 +9,7 @@
 <link>https://edibble.design/blog.html</link>
 <atom:link href="https://edibble.design/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-0.9.151</generator>
+<generator>quarto-0.9.183</generator>
 <lastBuildDate>Sun, 27 Mar 2022 13:00:00 GMT</lastBuildDate>
 <item>
   <title>Site launch</title>
@@ -22,10 +22,10 @@
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">menu_crd</span>()</span></code></pre></div>
 <div class="cell-output-stdout">
 <pre><code>design("Completely Randomised Design") %&gt;%
-  set_units(unit = 27) %&gt;%
-  set_trts(trt = 6) %&gt;%
+  set_units(unit = 24) %&gt;%
+  set_trts(trt = 7) %&gt;%
   allot_trts(trt ~ unit) %&gt;%
-  assign_trts("random", seed = 519) %&gt;%
+  assign_trts("random", seed = 594) %&gt;%
   serve_table()</code></pre>
 </div>
 </div>

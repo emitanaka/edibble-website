@@ -1,9 +1,16 @@
 ---
 title: "Blog"
+page-layout: full
+title-block-banner: true
 listing:
   contents: posts
   sort: "date desc"
+  sort-ui: false
+  filter-ui: false
   type: default
-  categories: true
   feed: true
+  categories: true
+  fields: [image, date, description, categories, title, author, reading-time]
+  field-display-names:
+    date_format: medium
 ---

@@ -1,5 +1,7 @@
 ---
 title: Page Not Found
+page-layout: full
+title-block-banner: true
 ---
 
 Sorry, we couldn't find the page you requested. 
