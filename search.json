@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "posts/site-launch.html",
+    "href": "posts/site-launch.html",
+    "title": "Site launch",
+    "section": "",
+    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 24) %>%\n  set_trts(trt = 7) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 594) %>%\n  serve_table()"
+  },
+  {
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "cases.html",
+    "href": "cases.html",
+    "title": "Cases",
+    "section": "",
+    "text": "sensory\n\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.\n\n\n\n\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cases/vegemite-sensory-test/vegemite-sensory-test.html",
+    "href": "cases/vegemite-sensory-test/vegemite-sensory-test.html",
+    "title": "Vegemite sensory discrimination tests",
+    "section": "",
+    "text": "This blog post attempts to describe the experimental design in Williams et al. (2021) for sensory discrimination test on vegemite using the edibble R package. Detailed descriptions are provided in Williams et al. (2021) and I only provide a redacted version in this blog.\nFirst, I load the package needed. The edibble package is currently available on GitHub at https://github.com/emitanaka/edibble – I am planning to submit this package on CRAN in the next couple of months.\nThere are three types of sensory discrimination tests that are used by sensory scientists Drs Ciarán Forde and Patrick O’Riordan in an experiment to see if a story about an alternative to vegemite could sharpen the taste buds and improve the discriminative abilities of Australian consumers. THe three sensory discrimination tests are as described below in Williams et al. (2021):\nThese test are abbreviated as T, PP, and M, respectively. The experimental structure is briefly summarised below:\nThe following is the experimental design description in Williams et al. (2021):"
+  },
+  {
+    "objectID": "cases/vegemite-sensory-test/vegemite-sensory-test.html#test-order",
+    "href": "cases/vegemite-sensory-test/vegemite-sensory-test.html#test-order",
+    "title": "Vegemite sensory discrimination tests",
+    "section": "Test order",
+    "text": "Test order\n\nOn each day half of the consumers took the sequence of monadic tests first and the other half after either the paired preference or triangle tests."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Stay tuned for updates that’ll be announced likely on my twitter account, @statsgen, first."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "news\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "Help",
+    "section": "",
+    "text": "Note\n\n\n\nIf you would like help or discuss the edibble system, please submit this to the discussion board. If the nature of the problem is with the technicality of the software (e.g. a possible bug), please submit the issue here."
+  }
+]
