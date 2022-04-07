@@ -170,11 +170,12 @@ $btn-close-hover-opacity:    1 !default;
 
 // Listing Styles
 
-
-
 #quarto-margin-sidebar {
-  margin-top: 150px!important;
+    margin-top: 150px!important;
 }
+
+
+
 
 #quarto-margin-sidebar .quarto-listing-category {
   font-size: .7rem !important;
@@ -194,11 +195,12 @@ div.quarto-post .listing-categories .listing-category {
   font-size: .8rem !important;
 }
 
-
 // Sidebar
 
-#quarto-sidebar {
-  margin-top: 150px!important;
+@media (min-width: 991.98px) {
+  #quarto-sidebar {
+    margin-top: 150px!important;
+  }
 }
 
 // Nav bar

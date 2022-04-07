@@ -12,12 +12,11 @@ base_url: http://emitanaka.org/
 twitter:
   creator: "@statsgen"
 categories: [sensory]
-#output:
-#  distill::distill_article:
-#    self_contained: false
+output:
+ distill::distill_article:
+   self_contained: false
 bibliography: ref.bib
 ---
-
 
 
 This blog post attempts to describe the experimental design in **@Williams2021-pa** for **sensory discrimination test on vegemite** using the `edibble` R package. Detailed descriptions are provided in @Williams2021-pa and I only provide a redacted version in this blog.

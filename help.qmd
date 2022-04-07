@@ -1,5 +1,7 @@
 ---
-title: "Discussion"
+title: "Help"
+page-layout: full
+title-block-banner: true
 ---
 
 :::{.callout-note}

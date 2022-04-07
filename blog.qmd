@@ -10,7 +10,5 @@ listing:
   type: default
   feed: true
   categories: true
-  fields: [image, date, description, categories, title, author, reading-time]
-  field-display-names:
-    date_format: medium
+  fields: [image, date, description, categories, title, reading-time]
 ---
