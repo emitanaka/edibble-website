@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://edibble.design/posts/site-launch.html</loc>
-    <lastmod>2022-04-07T00:12:04.031Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/tutorials.html</loc>
-    <lastmod>2022-04-07T00:12:04.323Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/cases.html</loc>
-    <lastmod>2022-04-07T00:12:04.639Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/about.html</loc>
-    <lastmod>2022-04-07T00:12:04.895Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/cases/vegemite-sensory-test/vegemite-sensory-test.html</loc>
-    <lastmod>2022-04-07T00:12:05.403Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/index.html</loc>
-    <lastmod>2022-04-07T00:12:05.631Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/contribute.html</loc>
-    <lastmod>2022-04-07T00:12:05.859Z</lastmod>
+    <lastmod>2022-04-09T08:14:53.608Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/getting-started.html</loc>
-    <lastmod>2022-04-07T00:12:06.111Z</lastmod>
+    <lastmod>2022-04-09T08:14:54.364Z</lastmod>
   </url>
   <url>
-    <loc>https://edibble.design/blog.html</loc>
-    <lastmod>2022-04-07T00:12:06.419Z</lastmod>
+    <loc>https://edibble.design/contribute.html</loc>
+    <lastmod>2022-04-09T08:14:54.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/cases/vegemite-sensory-test/vegemite-sensory-test.html</loc>
+    <lastmod>2022-04-09T08:14:55.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/index.html</loc>
+    <lastmod>2022-04-09T08:14:55.760Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/about.html</loc>
+    <lastmod>2022-04-09T08:14:56.052Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/cases.html</loc>
+    <lastmod>2022-04-09T08:14:56.372Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/help.html</loc>
-    <lastmod>2022-04-07T00:12:06.651Z</lastmod>
+    <lastmod>2022-04-09T08:14:57.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/blog.html</loc>
+    <lastmod>2022-04-09T08:14:57.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/tutorials/getting-started.html</loc>
+    <lastmod>2022-04-09T08:14:57.972Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/tutorials.html</loc>
+    <lastmod>2022-04-09T08:14:58.276Z</lastmod>
   </url>
 </urlset>

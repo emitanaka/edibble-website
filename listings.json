@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/tutorials.html",
-    "items": []
-  },
-  {
     "listing": "/cases.html",
     "items": [
       "/cases/vegemite-sensory-test/vegemite-sensory-test.html"
@@ -13,6 +9,12 @@
     "listing": "/blog.html",
     "items": [
       "/posts/site-launch.html"
+    ]
+  },
+  {
+    "listing": "/tutorials.html",
+    "items": [
+      "/tutorials/getting-started.html"
     ]
   }
 ]

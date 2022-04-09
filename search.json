@@ -7,20 +7,6 @@
     "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %>%\n  set_units(unit = 24) %>%\n  set_trts(trt = 7) %>%\n  allot_trts(trt ~ unit) %>%\n  assign_trts(\"random\", seed = 594) %>%\n  serve_table()"
   },
   {
-    "objectID": "tutorials.html",
-    "href": "tutorials.html",
-    "title": "Tutorials",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "cases.html",
-    "href": "cases.html",
-    "title": "Cases",
-    "section": "",
-    "text": "sensory\n\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.\n\n\n\n\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "cases/vegemite-sensory-test/vegemite-sensory-test.html",
     "href": "cases/vegemite-sensory-test/vegemite-sensory-test.html",
     "title": "Vegemite sensory discrimination tests",
@@ -42,11 +28,11 @@
     "text": "Stay tuned for updates that’ll be announced likely on my twitter account, @statsgen, first."
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "cases.html",
+    "href": "cases.html",
+    "title": "Cases",
     "section": "",
-    "text": "news\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "sensory\n\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.\n\n\n\n\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "help.html",
@@ -54,5 +40,26 @@
     "title": "Help",
     "section": "",
     "text": "Note\n\n\n\nIf you would like help or discuss the edibble system, please submit this to the discussion board. If the nature of the problem is with the technicality of the software (e.g. a possible bug), please submit the issue here."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "news\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "tutorials/getting-started.html",
+    "href": "tutorials/getting-started.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "install.packages(\"edibble\")\ninstall.packages(\"remotes\")\nremotes::install_github(\"emitanaka/edibble\")"
+  },
+  {
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "How to use the edibble system to construct a design of an experiment.\n\n\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -3,9 +3,8 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.215">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Emi Tanaka">
-  <meta name="description" content="Some post description">
-  <title>edibble designs - Site launch</title>
+  <meta name="description" content="How to use the edibble system to construct a design of an experiment.">
+  <title>edibble designs - Getting started</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -127,7 +126,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="edibble designs - Site launch">
+<meta name="twitter:title" content="edibble designs - Getting started">
 <meta name="twitter:description" content="Experimental design using the edibble system.
 ">
 <meta name="twitter:image" content="https://edibble.design/images/edibble-website-logo-blue.png">
@@ -189,7 +188,7 @@
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Site launch</h1>
+      <h1 class="quarto-secondary-nav-title">Getting started</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -229,22 +228,12 @@
 <header id="title-block-header" class="quarto-title-block default">
 
 
-
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Site launch</h1><div class="quarto-description"><p>Some post description</p></div></div><div class="quarto-categories"><div class="quarto-category">news</div></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
-<p>Emi Tanaka</p>
-</div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">March 28, 2022</p></div></div></div></header>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(edibble)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">menu_crd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-stdout">
-<pre><code>design("Completely Randomised Design") %&gt;%
-  set_units(unit = 24) %&gt;%
-  set_trts(trt = 7) %&gt;%
-  allot_trts(trt ~ unit) %&gt;%
-  assign_trts("random", seed = 594) %&gt;%
-  serve_table()</code></pre>
-</div>
-</div>
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Getting started</h1><div class="quarto-description"><p>How to use the `edibble` system to construct a design of an experiment.
+</p></div></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">April 9, 2022</p></div></div></div></header>
+<p>The <code>edibble</code> system is an R-package to build a design of an experiment. To use the system, you will need to install the free, open-source programming language <a href="https://www.r-project.org/">R</a> and install the package:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"edibble"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"emitanaka/edibble"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 
