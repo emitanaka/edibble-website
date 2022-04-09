@@ -9,7 +9,7 @@ listing:
   filter-ui: false
   type: default
   categories: true
-  fields: [image, date, description, categories, title, reading-time]
+  fields: [image, description, categories, title, reading-time]
   field-display-names:
     date_format: "D MMM YYYY"
 ---

@@ -7,10 +7,10 @@ website:
   page-footer: "© Copyright 2022 Emi Tanaka"
   reader-mode: true
   favicon: images/favicon.ico
-  cookie-consent:
-    type: implied
-    style: simple
-    palette: light
+  #cookie-consent:
+  #  type: implied
+  #  style: simple
+  #  palette: light
   twitter-card:
     title: "edibble designs"
     description: |

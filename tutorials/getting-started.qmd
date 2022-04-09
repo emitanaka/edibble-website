@@ -1,0 +1,20 @@
+---
+title: "Getting started"
+description: |
+  How to use the `edibble` system to construct a design of an experiment.
+date: "4/9/2022"
+---
+
+The `edibble` system is an R-package to build a design of an experiment. To use
+the system, you will need to install the free, open-source programming language [R](https://www.r-project.org/)
+and install the package:
+
+```r
+install.packages("edibble")
+```
+
+```r
+install.packages("remotes")
+remotes::install_github("emitanaka/edibble")
+```
+
