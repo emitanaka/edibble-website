@@ -58,6 +58,7 @@ website:
         text: Home
       - blog.qmd
       - cases.qmd
+      - tutorials.qmd
       - help.qmd
       - contribute.qmd
       - about.qmd

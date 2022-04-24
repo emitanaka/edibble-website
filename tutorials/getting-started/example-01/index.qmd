@@ -1,0 +1,20 @@
+---
+title: "My first experiment with edibble"
+author: "Emi Tanaka"
+format: revealjs
+---
+
+## Setting your name
+
+```{r}
+library(edibble)
+design() 
+```
+
+## Setting your nameg
+
+```{r}
+library(edibble)
+design() %>% 
+  set_units(unit = 10)
+```

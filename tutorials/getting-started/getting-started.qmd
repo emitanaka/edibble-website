@@ -1,0 +1,55 @@
+---
+title: "Getting started"
+description: |
+  How to use the `edibble` system to construct a design of an experiment.
+date: "`r Sys.Date()`"
+---
+
+<style>
+.slide-deck {
+  width: 100%;
+}
+</style>
+
+The `edibble` system is an R-package to build a design of an experiment. To use the system, you will need to install the free, open-source programming language [R](https://www.r-project.org/) [If you would like to read more R, I recommend that you check out the [R for data science community](https://www.rfordatasci.com/).]{.aside} and install the package:
+
+```r
+install.packages("edibble")
+```
+
+or you can install the developmental version with:
+
+```r
+install.packages("remotes")
+remotes::install_github("emitanaka/edibble")
+```
+
+
+```r
+library(edibble)
+design() %>% 
+  set_units(unit = 10)
+```
+
+<div>
+<iframe class="slide-deck" src="example-01/"></iframe>
+</div>
+
+
+``` {.markdown code-preview="/docs/tutorials/getting-started/examples/example-01.qmd"}
+---
+title: "Habits"
+author: "John Doe"
+format: {{< meta slide-format >}}
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+```

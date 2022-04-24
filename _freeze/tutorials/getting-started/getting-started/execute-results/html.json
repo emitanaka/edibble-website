@@ -1,0 +1,14 @@
+{
+  "hash": "09ece630eba06d5872592dbdec5d3a1b",
+  "result": {
+    "markdown": "---\ntitle: \"Getting started\"\ndescription: |\n  How to use the `edibble` system to construct a design of an experiment.\ndate: \"2022-04-24\"\n---\n\n<style>\n.slide-deck {\n  width: 100%;\n}\n</style>\n\nThe `edibble` system is an R-package to build a design of an experiment. To use the system, you will need to install the free, open-source programming language [R](https://www.r-project.org/) [If you would like to read more R, I recommend that you check out the [R for data science community](https://www.rfordatasci.com/).]{.aside} and install the package:\n\n```r\ninstall.packages(\"edibble\")\n```\n\nor you can install the developmental version with:\n\n```r\ninstall.packages(\"remotes\")\nremotes::install_github(\"emitanaka/edibble\")\n```\n\n\n```r\nlibrary(edibble)\ndesign() %>% \n  set_units(unit = 10)\n```\n\n<div>\n<iframe class=\"slide-deck\" src=\"example-01/\"></iframe>\n</div>\n\n\n``` {.markdown code-preview=\"/docs/tutorials/getting-started/examples/example-01.qmd\"}\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: {{< meta slide-format >}}\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n```",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": null
+  }
+}
