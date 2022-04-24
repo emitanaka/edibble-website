@@ -36,7 +36,7 @@ design() %>%
 </div>
 
 
-``` {.markdown code-preview="/docs/tutorials/getting-started/examples/example-01.qmd"}
+``` {.markdown code-preview="/examples/_example-01.qmd"}
 ---
 title: "Habits"
 author: "John Doe"
