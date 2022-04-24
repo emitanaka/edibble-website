@@ -2,46 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://edibble.design/posts/site-launch.html</loc>
-    <lastmod>2022-04-09T08:14:53.608Z</lastmod>
+    <lastmod>2022-04-24T09:11:19.160Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/getting-started.html</loc>
-    <lastmod>2022-04-09T08:14:54.364Z</lastmod>
+    <lastmod>2022-04-24T09:11:19.792Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/contribute.html</loc>
-    <lastmod>2022-04-09T08:14:54.720Z</lastmod>
+    <lastmod>2022-04-24T09:11:20.100Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/cases/vegemite-sensory-test/vegemite-sensory-test.html</loc>
-    <lastmod>2022-04-09T08:14:55.432Z</lastmod>
+    <lastmod>2022-04-24T09:11:20.656Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/index.html</loc>
-    <lastmod>2022-04-09T08:14:55.760Z</lastmod>
+    <lastmod>2022-04-24T09:11:20.928Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/about.html</loc>
-    <lastmod>2022-04-09T08:14:56.052Z</lastmod>
+    <lastmod>2022-04-24T09:11:21.164Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/cases.html</loc>
-    <lastmod>2022-04-09T08:14:56.372Z</lastmod>
+    <lastmod>2022-04-24T09:11:21.468Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/help.html</loc>
-    <lastmod>2022-04-09T08:14:57.072Z</lastmod>
+    <lastmod>2022-04-24T09:11:21.948Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/blog.html</loc>
-    <lastmod>2022-04-09T08:14:57.480Z</lastmod>
+    <lastmod>2022-04-24T09:11:22.228Z</lastmod>
   </url>
   <url>
-    <loc>https://edibble.design/tutorials/getting-started.html</loc>
-    <lastmod>2022-04-09T08:14:57.972Z</lastmod>
+    <loc>https://edibble.design/tutorials/getting-started/getting-started.html</loc>
+    <lastmod>2022-04-24T09:11:22.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/tutorials/getting-started/example-01/index.html</loc>
+    <lastmod>2022-04-24T09:11:23.012Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/tutorials/getting-started/examples/example-01.html</loc>
+    <lastmod>2022-04-24T09:11:23.272Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/tutorials.html</loc>
-    <lastmod>2022-04-09T08:14:58.276Z</lastmod>
+    <lastmod>2022-04-24T09:11:24.148Z</lastmod>
   </url>
 </urlset>

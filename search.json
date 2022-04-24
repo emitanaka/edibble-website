@@ -49,17 +49,45 @@
     "text": "news\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "tutorials/getting-started.html",
-    "href": "tutorials/getting-started.html",
+    "objectID": "tutorials/getting-started/getting-started.html",
+    "href": "tutorials/getting-started/getting-started.html",
     "title": "Getting started",
     "section": "",
-    "text": "install.packages(\"edibble\")\ninstall.packages(\"remotes\")\nremotes::install_github(\"emitanaka/edibble\")"
+    "text": "install.packages(\"edibble\")\nor you can install the developmental version with:\ninstall.packages(\"remotes\")\nremotes::install_github(\"emitanaka/edibble\")\nlibrary(edibble)\ndesign() %>% \n  set_units(unit = 10)\n\n\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: ?meta:slide-format\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "tutorials/getting-started/example-01/index.html#setting-your-name",
+    "href": "tutorials/getting-started/example-01/index.html#setting-your-name",
+    "title": "My first experiment with edibble",
+    "section": "Setting your name",
+    "text": "Setting your name\n\n\nAn edibble design"
+  },
+  {
+    "objectID": "tutorials/getting-started/example-01/index.html#setting-your-nameg",
+    "href": "tutorials/getting-started/example-01/index.html#setting-your-nameg",
+    "title": "My first experiment with edibble",
+    "section": "Setting your nameg",
+    "text": "Setting your nameg\n\n\nAn edibble design\n└─unit (10 levels)"
+  },
+  {
+    "objectID": "tutorials/getting-started/examples/example-01.html#setting-your-name",
+    "href": "tutorials/getting-started/examples/example-01.html#setting-your-name",
+    "title": "My first experiment with edibble",
+    "section": "Setting your name",
+    "text": "Setting your name\n\n\nAn edibble design"
+  },
+  {
+    "objectID": "tutorials/getting-started/examples/example-01.html#setting-your-nameg",
+    "href": "tutorials/getting-started/examples/example-01.html#setting-your-nameg",
+    "title": "My first experiment with edibble",
+    "section": "Setting your nameg",
+    "text": "Setting your nameg\n\n\nAn edibble design\n└─unit (10 levels)"
   },
   {
     "objectID": "tutorials.html",
     "href": "tutorials.html",
     "title": "Tutorials",
     "section": "",
-    "text": "How to use the edibble system to construct a design of an experiment.\n\n\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "library(edibble)\ndesign() \n\n\n\n\n\n\n0 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(edibble)\ndesign() \n\n\n\n\n\n\n0 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to use the edibble system to construct a design of an experiment.\n\n\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

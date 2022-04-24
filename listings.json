@@ -14,7 +14,9 @@
   {
     "listing": "/tutorials.html",
     "items": [
-      "/tutorials/getting-started.html"
+      "/tutorials/getting-started/example-01/index.html",
+      "/tutorials/getting-started/examples/example-01.html",
+      "/tutorials/getting-started/getting-started.html"
     ]
   }
 ]
