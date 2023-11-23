@@ -21,7 +21,7 @@ website:
     card-style: summary
     creator: "@statsgen"
     site: "@statsgen"
-  opengraph:
+  open-graph:
     title: "edibble designs"
     description: |
       Experimental design using the edibble system.

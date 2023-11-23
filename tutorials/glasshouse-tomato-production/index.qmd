@@ -1,0 +1,64 @@
+---
+title: "Glasshouse tomato production"
+description: |
+  Description
+last-modified: "`r Sys.Date()`"
+bibliography: ref.bib
+---
+
+
+This example is inspired from @meadStatisticalPrinciplesDesign2012 page 475.
+
+::: callout-note
+
+- The aim is to study the production of glasshouse tomatoes under different air and soil temperatures.  
+- There are 8 glasshouse compartments.
+- Each compartment contained two large troughs where tomatoes are grown.
+- For each trough, half of the soil would be heated or unheated.
+- The compartment was kept at minimum either 13°C or 16°C.
+- Heated soil was kept at either 18°C or 21°C.
+
+:::
+
+
+```{r}
+#| message: false
+library(edibble)
+tomato_units <- set_units(compartment = 8,
+                               trough = nested_in(compartment, 2),
+                           halftrough = nested_in(trough, 2))
+
+tomato_trts <- set_trts(air_temp = c("13°C", "16°C"),
+                          heated = c("Yes", "No"),
+                       soil_temp = conditioned_on(heated,
+                                          "Yes" ~ c("18°C", "21°C"),
+                                           "No" ~ "Natural"))
+
+tomato_design <- (tomato_units + tomato_trts) %>% 
+  allot_table(air_temp ~ compartment,
+                heated ~ halftrough,
+             soil_temp ~ halftrough,
+     # algorithms for each allotment
+     # Note: blocksdesign is from the `blocksdesign` package
+                              order = c("random", 
+                                        "random",
+                                        "blocksdesign"),
+                              label_nested = c(halftrough, trough), 
+                              seed = 1)
+```
+
+
+```{r}
+#| code-fold: true
+library(ggplot2)
+tomato_design %>% 
+  ggplot(aes(trough, halftrough)) +
+  geom_rect(aes(fill = air_temp), xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) + 
+  scale_fill_manual(values = c("#b5cbde", "#b3d5a4")) +
+  ggnewscale::new_scale_fill() +
+  geom_tile(aes(fill = soil_temp), color = "black", width = 0.9) +
+  scale_fill_manual(values = c("#e57f7f", "#7a0000", "#8c8c8c"), na.value = "#8c8c8c") +
+  facet_wrap(~compartment, ncol = 2) +
+  theme(axis.text = element_text(color = "black", margin = margin(t = 5, r = 5)))
+```
+

@@ -8,6 +8,8 @@ date: "`r Sys.Date()`"
 <style>
 .slide-deck {
   width: 100%;
+  height: 475px;
+  margin-bottom: 1em;
 }
 </style>
 
@@ -25,31 +27,13 @@ remotes::install_github("emitanaka/edibble")
 ```
 
 
-```r
+```{r}
 library(edibble)
 design() %>% 
   set_units(unit = 10)
 ```
 
-<div>
-<iframe class="slide-deck" src="example-01/"></iframe>
-</div>
+
+<iframe class="slide-deck" src="examples/example-02.html"></iframe>
 
 
-``` {.markdown code-preview="/examples/_example-01.qmd"}
----
-title: "Habits"
-author: "John Doe"
-format: {{< meta slide-format >}}
----
-
-## Getting up
-
-- Turn off alarm
-- Get out of bed
-
-## Going to sleep
-
-- Get in bed
-- Count sheep
-```

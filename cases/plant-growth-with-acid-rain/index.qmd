@@ -1,0 +1,29 @@
+---
+title: "Experimental design for studying the effects of simulated acid rain on features of a plant"
+description: ""
+author: Emi Tanaka
+affiliation: Monash University
+base_url: http://emitanaka.org/
+categories: [plant, acid rain]
+bibliography: ref.bib
+---
+
+This experiment is an abridged version described in @Wood1977-ui. 
+
+<blockquote>
+
+On October 18, 1973, each of 125 three-inch  plastic pots containing 180+ 6  g of sandy loam soil* were planted with four white pine seeds. The seed was collected from a  single tree located in northwestern Connecticut. The pots, placed on a greenhouse bench under 3000 Lux of supplementary incandescent lighting (16 h day-l), were  regularly irrigated with distilled water. No fertilizers were applied. Two weeks after seedling emergence, each pot was thinned to one seedling, and the population was randomly divided into five subsets of 25 plants. 
+
+Beginning on December 3, 1973, and continuing for the next 20 weeks, each subset was subjected to one weekly 6 h artificial acid rain adjusted to one of the following pH's: 5.6+0.6, 4.0+0.1, 3.3+0.1, 3.0+0.0, and 2.3+0.0. To simulate the anion composition of rainfall in central New Hampshire, 'rains' were solutions of H2804, HNO3, and HC1 in the proportion by chemical equivalents, SO~42 (66%), NO~31 (24%), C1-1 (10%). Analytical grade acids and glass distilled water were used. Rain drops (0.5 to 0.8 mm in diameter) were produced with a stainless steel rain nozzle. The seedlings, placed on a turntable, rotated slowly through the 'rain' with each pot receiving approx- imately 190+5ml of solution per treatment (190ml week -1 =4.2cm week -1 in comparison to an average of 2.5 cm of rain falling weekly in the northeastern U.S.). During treatment, plants were illuminated with 4300 Lux of fluorescent light. 
+</blockquote>
+
+```{r}
+#| eval: false
+library(edibble)
+design("Wood and Bormann (1977)") %>% 
+  set_units(block = 5,
+            pot = nested_in(block, 25)) %>% 
+  set_trts(acid_rain_ph = fct_attrs(lvl_attrs(c(5.6, 4, 3.3, 3, 2.3),
+                                              data = data.frame())))
+```
+

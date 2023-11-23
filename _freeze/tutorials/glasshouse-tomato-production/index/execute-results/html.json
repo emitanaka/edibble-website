@@ -1,0 +1,17 @@
+{
+  "hash": "49467b5eea54e6894a2d372a70ecda07",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Glasshouse tomato production\"\ndescription: |\n  Description\nlast-modified: \"2023-11-23\"\nbibliography: ref.bib\n---\n\n\n\nThis example is inspired from @meadStatisticalPrinciplesDesign2012 page 475.\n\n::: callout-note\n\n- The aim is to study the production of glasshouse tomatoes under different air and soil temperatures.  \n- There are 8 glasshouse compartments.\n- Each compartment contained two large troughs where tomatoes are grown.\n- For each trough, half of the soil would be heated or unheated.\n- The compartment was kept at minimum either 13°C or 16°C.\n- Heated soil was kept at either 18°C or 21°C.\n\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(edibble)\ntomato_units <- set_units(compartment = 8,\n                               trough = nested_in(compartment, 2),\n                           halftrough = nested_in(trough, 2))\n\ntomato_trts <- set_trts(air_temp = c(\"13°C\", \"16°C\"),\n                          heated = c(\"Yes\", \"No\"),\n                       soil_temp = conditioned_on(heated,\n                                          \"Yes\" ~ c(\"18°C\", \"21°C\"),\n                                           \"No\" ~ \"Natural\"))\n\ntomato_design <- (tomato_units + tomato_trts) %>% \n  allot_table(air_temp ~ compartment,\n                heated ~ halftrough,\n             soil_temp ~ halftrough,\n     # algorithms for each allotment\n     # Note: blocksdesign is from the `blocksdesign` package\n                              order = c(\"random\", \n                                        \"random\",\n                                        \"blocksdesign\"),\n                              label_nested = c(halftrough, trough), \n                              seed = 1)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"true\"}\nlibrary(ggplot2)\ntomato_design %>% \n  ggplot(aes(trough, halftrough)) +\n  geom_rect(aes(fill = air_temp), xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) + \n  scale_fill_manual(values = c(\"#b5cbde\", \"#b3d5a4\")) +\n  ggnewscale::new_scale_fill() +\n  geom_tile(aes(fill = soil_temp), color = \"black\", width = 0.9) +\n  scale_fill_manual(values = c(\"#e57f7f\", \"#7a0000\", \"#8c8c8c\"), na.value = \"#8c8c8c\") +\n  facet_wrap(~compartment, ncol = 2) +\n  theme(axis.text = element_text(color = \"black\", margin = margin(t = 5, r = 5)))\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

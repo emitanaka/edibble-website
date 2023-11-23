@@ -1,0 +1,27 @@
+---
+title: "My first experiment with edibble"
+author: "Emi Tanaka"
+execute:
+  echo: true
+format: 
+  revealjs:
+    menu: false
+    transition: none
+    controls: true
+    css: [bootstrap.min.css, styles.css]
+---
+
+## Setting your name
+
+```{r}
+library(edibble)
+design() 
+```
+
+## Setting your name
+
+```{r}
+library(edibble)
+design() %>% 
+  set_units(unit = 10)
+```
