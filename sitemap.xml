@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://edibble.design/posts/site-launch.html</loc>
-    <lastmod>2022-04-24T09:11:19.160Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/getting-started.html</loc>
-    <lastmod>2022-04-24T09:11:19.792Z</lastmod>
+    <loc>https://edibble.design/tutorials.html</loc>
+    <lastmod>2023-11-23T03:14:14.111Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/contribute.html</loc>
-    <lastmod>2022-04-24T09:11:20.100Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/cases/vegemite-sensory-test/vegemite-sensory-test.html</loc>
-    <lastmod>2022-04-24T09:11:20.656Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/index.html</loc>
-    <lastmod>2022-04-24T09:11:20.928Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/about.html</loc>
-    <lastmod>2022-04-24T09:11:21.164Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/cases.html</loc>
-    <lastmod>2022-04-24T09:11:21.468Z</lastmod>
+    <lastmod>2023-11-23T03:14:13.523Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/help.html</loc>
-    <lastmod>2022-04-24T09:11:21.948Z</lastmod>
+    <lastmod>2023-11-23T03:14:12.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/tutorials/getting-started/examples/example-02.html</loc>
+    <lastmod>2023-11-23T03:14:11.963Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/cases.html</loc>
+    <lastmod>2023-11-23T03:14:11.087Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/index.html</loc>
+    <lastmod>2023-11-23T03:14:10.443Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/cases/vegemite-sensory-test/index.html</loc>
+    <lastmod>2023-11-23T03:14:09.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/getting-started.html</loc>
+    <lastmod>2023-11-23T03:14:08.335Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/cases/plant-growth-with-acid-rain/index.html</loc>
+    <lastmod>2023-11-23T03:14:09.131Z</lastmod>
+  </url>
+  <url>
+    <loc>https://edibble.design/blog/site-launch.html</loc>
+    <lastmod>2023-11-23T03:14:10.199Z</lastmod>
   </url>
   <url>
     <loc>https://edibble.design/blog.html</loc>
-    <lastmod>2022-04-24T09:11:22.228Z</lastmod>
+    <lastmod>2023-11-23T03:14:10.747Z</lastmod>
   </url>
   <url>
-    <loc>https://edibble.design/tutorials/getting-started/getting-started.html</loc>
-    <lastmod>2022-04-24T09:11:22.704Z</lastmod>
+    <loc>https://edibble.design/tutorials/getting-started/index.html</loc>
+    <lastmod>2023-11-23T03:14:11.531Z</lastmod>
   </url>
   <url>
-    <loc>https://edibble.design/tutorials/getting-started/example-01/index.html</loc>
-    <lastmod>2022-04-24T09:11:23.012Z</lastmod>
+    <loc>https://edibble.design/tutorials/glasshouse-tomato-production/index.html</loc>
+    <lastmod>2023-11-23T03:14:12.731Z</lastmod>
   </url>
   <url>
-    <loc>https://edibble.design/tutorials/getting-started/examples/example-01.html</loc>
-    <lastmod>2022-04-24T09:11:23.272Z</lastmod>
-  </url>
-  <url>
-    <loc>https://edibble.design/tutorials.html</loc>
-    <lastmod>2022-04-24T09:11:24.148Z</lastmod>
+    <loc>https://edibble.design/about.html</loc>
+    <lastmod>2023-11-23T03:14:13.747Z</lastmod>
   </url>
 </urlset>

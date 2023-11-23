@@ -1,22 +1,23 @@
 [
   {
+    "listing": "/tutorials.html",
+    "items": [
+      "/tutorials/getting-started/examples/example-02.html",
+      "/tutorials/glasshouse-tomato-production/index.html",
+      "/tutorials/getting-started/index.html"
+    ]
+  },
+  {
     "listing": "/cases.html",
     "items": [
-      "/cases/vegemite-sensory-test/vegemite-sensory-test.html"
+      "/cases/plant-growth-with-acid-rain/index.html",
+      "/cases/vegemite-sensory-test/index.html"
     ]
   },
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/site-launch.html"
-    ]
-  },
-  {
-    "listing": "/tutorials.html",
-    "items": [
-      "/tutorials/getting-started/example-01/index.html",
-      "/tutorials/getting-started/examples/example-01.html",
-      "/tutorials/getting-started/getting-started.html"
+      "/blog/site-launch.html"
     ]
   }
 ]
