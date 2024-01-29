@@ -51,7 +51,7 @@ $link-color:                $success !default;
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif:      'Josefin Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $headings-font-weight:        400 !default;
 
 // Dropdowns
@@ -140,7 +140,7 @@ $btn-close-hover-opacity:    1 !default;
 // Variables
 
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;500;700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 // Navbar
 
 .bg-primary {
@@ -163,7 +163,7 @@ $btn-close-hover-opacity:    1 !default;
 }
 
 .main-font {
-  font-family: 'Josefin Sans', Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 
@@ -419,4 +419,11 @@ input,
   .btn-close {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dfd7ca'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
   }
+}
+
+
+// Quarto titles
+
+.quarto-title {
+  font-family: 'Righteous', cursive;
 }

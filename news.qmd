@@ -1,9 +1,9 @@
 ---
-title: "Blog"
+title: "News"
 page-layout: full
 title-block-banner: true
 listing:
-  contents: blog
+  contents: news
   sort: "date desc"
   sort-ui: false
   filter-ui: false

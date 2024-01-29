@@ -1,6 +1,7 @@
 ---
 title: "About"
-page-layout: full
+#page-layout: full
 title-block-banner: true
 ---
 
+The [edibble.design](https://edibble.design/) website is a collection of resources for the [edibble](https://edibble.emitanaka.org/) R-package. This website extends the documentation and vignettes from the package website.

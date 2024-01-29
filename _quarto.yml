@@ -4,13 +4,13 @@ project:
 
 website:
   title: "edibble designs"
-  page-footer: "© Copyright 2022 Emi Tanaka"
+  page-footer: "© Copyright 2022-2024 Emi Tanaka"
   reader-mode: true
   favicon: images/favicon.ico
-  #cookie-consent:
-  #  type: implied
-  #  style: simple
-  #  palette: light
+  cookie-consent:
+    type: implied
+    style: simple
+    palette: light
   twitter-card:
     title: "edibble designs"
     description: |
@@ -42,12 +42,10 @@ website:
     #background: "light"
     #foreground: "primary"
     #border: true
-    #alignment: "left"
+    alignment: "left"
     collapse-level: 2
     pinned: false
     logo: images/edibble-website-logo-blue.png
-    contents:
-      - tutorials.qmd
 
   navbar:
     logo: images/edibble-website-logo.png
@@ -56,7 +54,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - blog.qmd
+      - news.qmd
       - cases.qmd
       - tutorials.qmd
       - help.qmd
