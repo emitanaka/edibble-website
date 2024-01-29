@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "tutorials.html",
-    "href": "tutorials.html",
-    "title": "Tutorials",
+    "objectID": "cases/vegemite-sensory-test/index.html",
+    "href": "cases/vegemite-sensory-test/index.html",
+    "title": "Vegemite sensory discrimination tests",
     "section": "",
-    "text": "My first experiment with edibble\n\n\n\n\n\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nGlasshouse tomato production\n\n\n\n\n\nDescription\n\n\n\n\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\nGetting started\n\n\n\n\n\nHow to use the edibble system to construct a design of an experiment.\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "This blog post attempts to describe the experimental design in Williams et al. (2021) for sensory discrimination test on vegemite using the edibble R package. Detailed descriptions are provided in Williams et al. (2021) and I only provide a redacted version in this blog.\nFirst, I load the package needed. The edibble package is currently available on GitHub at https://github.com/emitanaka/edibble – I am planning to submit this package on CRAN in the next couple of months.\nlibrary(tidyverse)\nlibrary(edibble)\nThere are three types of sensory discrimination tests that are used by sensory scientists Drs Ciarán Forde and Patrick O’Riordan in an experiment to see if a story about an alternative to vegemite could sharpen the taste buds and improve the discriminative abilities of Australian consumers. The three sensory discrimination tests are as described below in Williams et al. (2021):\nThese test are abbreviated as T, PP, and M, respectively. The experimental structure is briefly summarised below:\nFrom Williams et al. (2021): broad structure of the vegemite experiment.\n\n\nDay\n1\n2\n3\n4\n\n\n\n\nCover story\nno\nno\nyes\nyes\n\n\nTest\nT, M\nPP, M\nT, M\nPP, M\n\n\nConsumer\n1-42\n43-84\n85-126\n127-168\nThe following is the experimental design description in Williams et al. (2021):"
+  },
+  {
+    "objectID": "cases/vegemite-sensory-test/index.html#test-order",
+    "href": "cases/vegemite-sensory-test/index.html#test-order",
+    "title": "Vegemite sensory discrimination tests",
+    "section": "Test order",
+    "text": "Test order\n\nOn each day half of the consumers took the sequence of monadic tests first and the other half after either the paired preference or triangle tests."
   },
   {
     "objectID": "help.html",
@@ -12,6 +19,48 @@
     "title": "Help",
     "section": "",
     "text": "Note\n\n\n\nIf you would like help or discuss the edibble system, please submit this to the discussion board. If the nature of the problem is with the technicality of the software (e.g. a possible bug), please submit the issue here."
+  },
+  {
+    "objectID": "tutorials/glasshouse-tomato-production/index.html",
+    "href": "tutorials/glasshouse-tomato-production/index.html",
+    "title": "Glasshouse tomato production",
+    "section": "",
+    "text": "This example is inspired from Mead, Gilmour, and Mead (2012) page 475.\n\n\n\n\n\n\nNote\n\n\n\n\nThe aim is to study the production of glasshouse tomatoes under different air and soil temperatures.\n\nThere are 8 glasshouse compartments.\nEach compartment contained two large troughs where tomatoes are grown.\nFor each trough, half of the soil would be heated or unheated.\nThe compartment was kept at minimum either 13°C or 16°C.\nHeated soil was kept at either 18°C or 21°C.\n\n\n\n\nlibrary(edibble)\ntomato_units &lt;- set_units(compartment = 8,\n                               trough = nested_in(compartment, 2),\n                           halftrough = nested_in(trough, 2))\n\ntomato_trts &lt;- set_trts(air_temp = c(\"13°C\", \"16°C\"),\n                          heated = c(\"Yes\", \"No\"),\n                       soil_temp = conditioned_on(heated,\n                                          \"Yes\" ~ c(\"18°C\", \"21°C\"),\n                                           \"No\" ~ \"Natural\"))\n\ntomato_design &lt;- (tomato_units + tomato_trts) %&gt;% \n  allot_table(air_temp ~ compartment,\n                heated ~ halftrough,\n             soil_temp ~ halftrough,\n     # algorithms for each allotment\n     # Note: blocksdesign is from the `blocksdesign` package\n                              order = c(\"random\", \n                                        \"random\",\n                                        \"blocksdesign\"),\n                              label_nested = c(halftrough, trough), \n                              seed = 1)\n\n\n\nCode\nlibrary(ggplot2)\ntomato_design %&gt;% \n  ggplot(aes(trough, halftrough)) +\n  geom_rect(aes(fill = air_temp), xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) + \n  scale_fill_manual(values = c(\"#b5cbde\", \"#b3d5a4\")) +\n  ggnewscale::new_scale_fill() +\n  geom_tile(aes(fill = soil_temp), color = \"black\", width = 0.9) +\n  scale_fill_manual(values = c(\"#e57f7f\", \"#7a0000\", \"#8c8c8c\"), na.value = \"#8c8c8c\") +\n  facet_wrap(~compartment, ncol = 2) +\n  theme(axis.text = element_text(color = \"black\", margin = margin(t = 5, r = 5)))\n\n\n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nMead, R, S G Gilmour, and A Mead. 2012. Statistical Principles for the Design of Experiments: Applications to Real Experiments. https://doi.org/10.1017/CBO9781139020879."
+  },
+  {
+    "objectID": "tutorials/getting-started/index.html",
+    "href": "tutorials/getting-started/index.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "The edibble system is an R-package to build a design of an experiment. To use the system, you will need to install the free, open-source programming language R  and install the package:If you would like to read more R, I recommend that you check out the R for data science community.\ninstall.packages(\"edibble\")\nor you can install the developmental version with:\ninstall.packages(\"remotes\")\nremotes::install_github(\"emitanaka/edibble\")\n\nlibrary(edibble)\ndesign() %&gt;% \n  set_units(unit = 10)\n\nAn edibble design\n└─unit (10 levels)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The edibble.design website is a collection of resources for the edibble R-package. This website extends the documentation and vignettes from the package website."
+  },
+  {
+    "objectID": "cases.html",
+    "href": "cases.html",
+    "title": "Cases",
+    "section": "",
+    "text": "Experimental design for studying the effects of simulated acid rain on features of a plant\n\n\n\n\n\n\nplant\n\n\nacid rain\n\n\n\n\n\n\n\n\n\n2 min\n\n\n\n\n\n\n\n\n\n\n\n\nVegemite sensory discrimination tests\n\n\n\n\n\n\nsensory\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package. \n\n\n\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "This website is still under construction!\n\n\n\n\n🚧\nThere’s nothing much to see here at the moment.\n\nStay tuned for updates!"
+  },
+  {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "Site launch\n\n\n\n\n\n\nnews\n\n\n\nSome post description\n\n\n\n\n\nMar 28, 2022\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tutorials/getting-started/examples/example-02.html#setting-your-name",
@@ -28,32 +77,18 @@
     "text": "Setting your nameg\n\nlibrary(edibble)\ndesign() %&gt;% \n  set_units(unit = 10)\n\nAn edibble design\n└─unit (10 levels)"
   },
   {
-    "objectID": "cases.html",
-    "href": "cases.html",
-    "title": "Cases",
+    "objectID": "news/site-launch.html",
+    "href": "news/site-launch.html",
+    "title": "Site launch",
     "section": "",
-    "text": "Experimental design for studying the effects of simulated acid rain on features of a plant\n\n\n\n\n\n\n\nplant\n\n\nacid rain\n\n\n\n\n\n\n\n\n\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nVegemite sensory discrimination tests\n\n\n\n\n\n\n\nsensory\n\n\n\n\nCan Australians distinguish the true taste of Vegemite? Designing an expriment with sensory discrimination test with the edibble package.\n\n\n\n\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
+    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %&gt;%\n  set_units(unit = 20) %&gt;%\n  set_trts(trt = 7) %&gt;%\n  allot_trts(trt ~ unit) %&gt;%\n  assign_trts(\"random\", seed = 863) %&gt;%\n  serve_table()"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Tutorials",
     "section": "",
-    "text": "This website is still under construction!\n\n\n\n\n🚧\nThere’s nothing much to see here at the moment.\n\n\n\nStay tuned for updates that’ll be announced likely on my twitter account, @statsgen, first."
-  },
-  {
-    "objectID": "cases/vegemite-sensory-test/index.html",
-    "href": "cases/vegemite-sensory-test/index.html",
-    "title": "Vegemite sensory discrimination tests",
-    "section": "",
-    "text": "This blog post attempts to describe the experimental design in Williams et al. (2021) for sensory discrimination test on vegemite using the edibble R package. Detailed descriptions are provided in Williams et al. (2021) and I only provide a redacted version in this blog.\nFirst, I load the package needed. The edibble package is currently available on GitHub at https://github.com/emitanaka/edibble – I am planning to submit this package on CRAN in the next couple of months.\nlibrary(tidyverse)\nlibrary(edibble)\nThere are three types of sensory discrimination tests that are used by sensory scientists Drs Ciarán Forde and Patrick O’Riordan in an experiment to see if a story about an alternative to vegemite could sharpen the taste buds and improve the discriminative abilities of Australian consumers. The three sensory discrimination tests are as described below in Williams et al. (2021):\nThese test are abbreviated as T, PP, and M, respectively. The experimental structure is briefly summarised below:\nFrom Williams et al. (2021): broad structure of the vegemite experiment.\n\n\nDay\n1\n2\n3\n4\n\n\n\n\nCover story\nno\nno\nyes\nyes\n\n\nTest\nT, M\nPP, M\nT, M\nPP, M\n\n\nConsumer\n1-42\n43-84\n85-126\n127-168\nThe following is the experimental design description in Williams et al. (2021):"
-  },
-  {
-    "objectID": "cases/vegemite-sensory-test/index.html#test-order",
-    "href": "cases/vegemite-sensory-test/index.html#test-order",
-    "title": "Vegemite sensory discrimination tests",
-    "section": "Test order",
-    "text": "Test order\n\nOn each day half of the consumers took the sequence of monadic tests first and the other half after either the paired preference or triangle tests."
+    "text": "My first experiment with edibble\n\n\n\n\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nGlasshouse tomato production\n\n\n\n\n\nDescription \n\n\n\n\n\n4 min\n\n\n\n\n\n\n\n\n\n\n\n\nGetting started\n\n\n\n\n\nHow to use the edibble system to construct a design of an experiment. \n\n\n\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cases/plant-growth-with-acid-rain/index.html",
@@ -61,33 +96,5 @@
     "title": "Experimental design for studying the effects of simulated acid rain on features of a plant",
     "section": "",
     "text": "This experiment is an abridged version described in Wood and Bormann (1977).\n\nOn October 18, 1973, each of 125 three-inch plastic pots containing 180+ 6 g of sandy loam soil* were planted with four white pine seeds. The seed was collected from a single tree located in northwestern Connecticut. The pots, placed on a greenhouse bench under 3000 Lux of supplementary incandescent lighting (16 h day-l), were regularly irrigated with distilled water. No fertilizers were applied. Two weeks after seedling emergence, each pot was thinned to one seedling, and the population was randomly divided into five subsets of 25 plants.\nBeginning on December 3, 1973, and continuing for the next 20 weeks, each subset was subjected to one weekly 6 h artificial acid rain adjusted to one of the following pH’s: 5.6+0.6, 4.0+0.1, 3.3+0.1, 3.0+0.0, and 2.3+0.0. To simulate the anion composition of rainfall in central New Hampshire, ‘rains’ were solutions of H2804, HNO3, and HC1 in the proportion by chemical equivalents, SO~42 (66%), NO~31 (24%), C1-1 (10%). Analytical grade acids and glass distilled water were used. Rain drops (0.5 to 0.8 mm in diameter) were produced with a stainless steel rain nozzle. The seedlings, placed on a turntable, rotated slowly through the ‘rain’ with each pot receiving approx- imately 190+5ml of solution per treatment (190ml week -1 =4.2cm week -1 in comparison to an average of 2.5 cm of rain falling weekly in the northeastern U.S.). During treatment, plants were illuminated with 4300 Lux of fluorescent light.\n\n\nlibrary(edibble)\ndesign(\"Wood and Bormann (1977)\") %&gt;% \n  set_units(block = 5,\n            pot = nested_in(block, 25)) %&gt;% \n  set_trts(acid_rain_ph = fct_attrs(lvl_attrs(c(5.6, 4, 3.3, 3, 2.3),\n                                              data = data.frame())))\n\n\n\n\n\nReferences\n\nWood, Tim, and F H Bormann. 1977. “Short-Term Effects of a Simulated Acid Rain Upon the Growth and Nutrient Relations of Pinus Strobus, L.” Water, Air, and Soil Pollution 7: 479–88."
-  },
-  {
-    "objectID": "blog/site-launch.html",
-    "href": "blog/site-launch.html",
-    "title": "Site launch",
-    "section": "",
-    "text": "library(edibble)\nmenu_crd()\n\ndesign(\"Completely Randomised Design\") %&gt;%\n  set_units(unit = 24) %&gt;%\n  set_trts(trt = 10) %&gt;%\n  allot_trts(trt ~ unit) %&gt;%\n  assign_trts(\"random\", seed = 36) %&gt;%\n  serve_table()"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Site launch\n\n\n\n\n\n\n\nnews\n\n\n\n\nSome post description\n\n\n\n\n\n\nMar 28, 2022\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "tutorials/getting-started/index.html",
-    "href": "tutorials/getting-started/index.html",
-    "title": "Getting started",
-    "section": "",
-    "text": "The edibble system is an R-package to build a design of an experiment. To use the system, you will need to install the free, open-source programming language R  and install the package:If you would like to read more R, I recommend that you check out the R for data science community.\ninstall.packages(\"edibble\")\nor you can install the developmental version with:\ninstall.packages(\"remotes\")\nremotes::install_github(\"emitanaka/edibble\")\n\nlibrary(edibble)\ndesign() %&gt;% \n  set_units(unit = 10)\n\nAn edibble design\n└─unit (10 levels)"
-  },
-  {
-    "objectID": "tutorials/glasshouse-tomato-production/index.html",
-    "href": "tutorials/glasshouse-tomato-production/index.html",
-    "title": "Glasshouse tomato production",
-    "section": "",
-    "text": "This example is inspired from Mead, Gilmour, and Mead (2012) page 475.\n\n\n\n\n\n\nNote\n\n\n\n\nThe aim is to study the production of glasshouse tomatoes under different air and soil temperatures.\n\nThere are 8 glasshouse compartments.\nEach compartment contained two large troughs where tomatoes are grown.\nFor each trough, half of the soil would be heated or unheated.\nThe compartment was kept at minimum either 13°C or 16°C.\nHeated soil was kept at either 18°C or 21°C.\n\n\n\n\nlibrary(edibble)\ntomato_units &lt;- set_units(compartment = 8,\n                               trough = nested_in(compartment, 2),\n                           halftrough = nested_in(trough, 2))\n\ntomato_trts &lt;- set_trts(air_temp = c(\"13°C\", \"16°C\"),\n                          heated = c(\"Yes\", \"No\"),\n                       soil_temp = conditioned_on(heated,\n                                          \"Yes\" ~ c(\"18°C\", \"21°C\"),\n                                           \"No\" ~ \"Natural\"))\n\ntomato_design &lt;- (tomato_units + tomato_trts) %&gt;% \n  allot_table(air_temp ~ compartment,\n                heated ~ halftrough,\n             soil_temp ~ halftrough,\n     # algorithms for each allotment\n     # Note: blocksdesign is from the `blocksdesign` package\n                              order = c(\"random\", \n                                        \"random\",\n                                        \"blocksdesign\"),\n                              label_nested = c(halftrough, trough), \n                              seed = 1)\n\n\n\nCode\nlibrary(ggplot2)\ntomato_design %&gt;% \n  ggplot(aes(trough, halftrough)) +\n  geom_rect(aes(fill = air_temp), xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) + \n  scale_fill_manual(values = c(\"#b5cbde\", \"#b3d5a4\")) +\n  ggnewscale::new_scale_fill() +\n  geom_tile(aes(fill = soil_temp), color = \"black\", width = 0.9) +\n  scale_fill_manual(values = c(\"#e57f7f\", \"#7a0000\", \"#8c8c8c\"), na.value = \"#8c8c8c\") +\n  facet_wrap(~compartment, ncol = 2) +\n  theme(axis.text = element_text(color = \"black\", margin = margin(t = 5, r = 5)))\n\n\n\n\n\n\n\n\n\nReferences\n\nMead, R, S G Gilmour, and A Mead. 2012. Statistical Principles for the Design of Experiments: Applications to Real Experiments. https://doi.org/10.1017/CBO9781139020879."
   }
 ]

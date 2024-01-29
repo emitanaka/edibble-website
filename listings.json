@@ -1,13 +1,5 @@
 [
   {
-    "listing": "/tutorials.html",
-    "items": [
-      "/tutorials/getting-started/examples/example-02.html",
-      "/tutorials/glasshouse-tomato-production/index.html",
-      "/tutorials/getting-started/index.html"
-    ]
-  },
-  {
     "listing": "/cases.html",
     "items": [
       "/cases/plant-growth-with-acid-rain/index.html",
@@ -15,9 +7,17 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/news.html",
     "items": [
-      "/blog/site-launch.html"
+      "/news/site-launch.html"
+    ]
+  },
+  {
+    "listing": "/tutorials.html",
+    "items": [
+      "/tutorials/getting-started/examples/example-02.html",
+      "/tutorials/glasshouse-tomato-production/index.html",
+      "/tutorials/getting-started/index.html"
     ]
   }
 ]
