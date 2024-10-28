@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - .well-known/atproto-did
 
 website:
   title: "edibble designs"
