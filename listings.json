@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/news.html",
+    "items": [
+      "/news/site-launch.html"
+    ]
+  },
+  {
     "listing": "/cases.html",
     "items": [
       "/cases/plant-growth-with-acid-rain/index.html",
@@ -7,16 +13,10 @@
     ]
   },
   {
-    "listing": "/news.html",
-    "items": [
-      "/news/site-launch.html"
-    ]
-  },
-  {
     "listing": "/tutorials.html",
     "items": [
-      "/tutorials/getting-started/examples/example-02.html",
       "/tutorials/glasshouse-tomato-production/index.html",
+      "/tutorials/getting-started/examples/example-02.html",
       "/tutorials/getting-started/index.html"
     ]
   }
